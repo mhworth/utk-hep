@@ -1,0 +1,93 @@
+{% load cms_tags menu_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<!-- Replace "Blue One Column" with the title of this particular page. To improve search engine indexing, the page title should be the same here as the Header 1 <h1> in the body -->
+<title>UT Knoxville | High Energy Physics Group</title>
+<meta name="description" content="The University of Tennessee, Knoxville was founded in 1794 and was designated the state land-grant institution in 1879. The University now has nearly 26,000 students and 400 academic programs." />
+<meta name="keywords" content="university, tennessee, knoxville, university of tennessee, university of tennessee knoxville, tennessee schools, tennessee colleges, tennessee higher education, higher education, ut, utk, big orange, vols, lady vols, volunteers" />
+<meta name="author" content="University of Tennessee | Creative Services" />
+<link rel="shortcut icon" href="http://www.utk.edu/new_images/favicon.ico" />
+<!-- The following lines call the primary (global.css) and secondary style sheets -->
+<link href="http://www.utk.edu/cs/templates/css/global.css" rel="stylesheet" type="text/css" />
+<link href="/media/css/utk_hep.css" rel="stylesheet" type="text/css" />
+<!-- <link href="http://www.utk.edu/cs/templates/css/blue2.css" rel="stylesheet" type="text/css" /> -->
+<link href="/media/css/blue2.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+<!-- BEGIN HEADER | EDIT ONLY THE HEADER-RIGHT SECTION -->
+<p class="skip"><a href="#maincontent">Skip to Main Content</a></p>
+	<div id="header-inner">
+	<div id="header-left">
+	<a href="http://www.utk.edu"><img src="http://www.utk.edu/cs/templates/images/ut-wordmark.gif" alt="The University of Tennessee" width="240" height="90" border="0" /></a>
+	<p class="logo"><a href="http://www.utk.edu">The University of Tennessee</a></p>	  </div>
+	<div id="header-right">
+	<!-- To make the header image a link to your homepage, replace the # with your URL. Also, remember to change the alt tag on the header image! Doing so improves usibility and accessibility. -->
+<p><a href="#"><img src="/media/images/BannerLayer.png" alt="Enter the name of your College, Department, or Unit Here" border="0" /></a></p>
+	<div id="header-menu">
+	<h2>Frequently Used Tools:</h2> <!-- Does not display in standard browsers -->
+	<ul>
+	<li><a href="http://webmail.utk.edu">Webmail</a>&nbsp;&nbsp;|&nbsp;</li>
+	<li><a href="http://tmail.utk.edu">Tmail</a>&nbsp;&nbsp;|&nbsp;</li>
+	<li><a href="http://online.utk.edu">Online@UT</a>&nbsp;&nbsp;|&nbsp;</li>
+	<li><a href="http://www.utk.edu/alpha">A-Z Index</a></li></ul></div>
+<div id="header-search">
+	<h2>Search The University of Tennessee:</h2> <!-- Does not display in standard browsers -->
+	<form id="utk_seek" name="utk_seek" method="post" accept-charset="iso-8859-1" onsubmit="checkTerms();return false;" action="http://www.tennessee.edu/masthead/query.php">
+		<label for="utk_seek" class="hide-search">search: </label> <!-- Does not display in standard browsers -->
+		<input type="text" name="qt" size="3" class="searchbox" value="Search" onfocus="this.value=''" title="search" />
+		<select name="qtype" class="searchtext" title="search type">
+		<option value="utk">Campus</option>
+		<option value="ldap">People</option>  	
+		<option value="system">System</option></select>
+		<input name="go" type="image" src="http://www.utk.edu/cs/templates/images/go.gif" alt="go" />
+	</form></div>
+<br clear="all" /> 
+<!-- Clears the header-menu and header-search columns --></div>
+<br clear="all" /> <!-- Clears the header-left and header-right columns --></div>
+<!-- END HEADER -->
+
+<!-- BEGIN DEPARTMENT -->
+<div id="department-outer">
+<div id="department-inner">
+<div id="department-left">
+<!-- This is where you add the name of YOUR department, college, or unit and link to YOUR home page. Change the # to your URL.  Remember, to display properly this MUST be a linked H2 -->
+<h2><a href="http://www.phys.utk.edu">Physics &amp; Astronomy&raquo;</a></h2></div>
+<div id="department-right" class="breadcrumb">
+<!-- department-right is where you can create "breadcrumb navigation."  For example, if the page lists the Ceramics faculty, department-right might include: School of Art > Ceramics > Faculty. This gives users a better sense of how deeply they have dug themselves into a site.  You might also use department-right to feature important or frequently-used links -->
+	<!--<div style="" class="breadcrumb">{% show_breadcrumb %}</div>-->
+{% show_breadcrumb %}
+</div>
+	<br clear="all" /> <!-- Clears the department-left and department-right columns --></div></div>
+<!-- END DEPARTMENT -->
+
+<!-- BEGIN CONTENT AREA -->
+<div id="content-outer">
+	<div id="content-inner">
+<!-- BEGIN LEFT MENU -->
+	<div id="left-menu">	<h2>Main Navigation:</h2> <!-- Does not display in standard browsers -->
+		<ul>
+		{% show_menu 0 100 0 100 %}
+		</ul>
+	</div><!-- END LEFT MENU -->
+<!-- BEGIN MAIN CONTENT AREA -->
+  <div id="main-content"><a name="maincontent" id="maincontent"></a> <!-- A named anchor included to improve web accessibility.  DO NOT EDIT -->
+
+<div style="width: 450px;float: left">
+{% placeholder base_content %}
+</div>
+<div id="content-right">
+{% placeholder sub_content %}
+</div>
+
+<br clear="all" /> <!-- Clears the left-menu and main-content columns --></div></div><!-- END CONTENT AREA -->
+<!-- BEGIN FOOTER | DO NOT EDIT THIS AREA -->
+<div id="footer-orange-outer">
+<div id="footer-orange-inner">	&nbsp;</div></div>
+<div id="footer-grey-outer"><div id="footer-grey-inner">
+<p><a href="http://www.utk.edu">The University of Tennessee</a> &nbsp;&middot;&nbsp; Knoxville, TN 37996 &nbsp;&middot;&nbsp; (865) 974-1000 &nbsp;&middot;&nbsp;
+<a href="http://www.utk.edu/contact/">Contact UT</a></p></div></div>
+<!-- END FOOTER -->
+
+</body></html>
