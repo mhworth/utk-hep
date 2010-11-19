@@ -1,0 +1,24 @@
+{% extends "logbook/base.html" %}
+
+{% block content %} 
+
+<div id="plot">
+
+
+<div id="plot_image">
+ <img src="{{ image_url }}"></img>
+</div>
+
+{% if editing %}
+
+<form id="edit_form">
+  <input type="text" id="Name">{{ name }}</input>
+  <input type="submit">Edit</input>
+</form>
+{% endif %}
+
+</div>
+
+{% endblock %}
+
+{% block title %} {{ flatpage.title }} {% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block javascript %}
+
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/logbook.css"/>
+{% endblock %}
+
+{% block content %} 
+
+ <div id="status">
+   {% block status %}
+ 
+   {% endblock %}
+ </div>
+ 
+ <div id="display">
+    {% block display %}
+    
+    
+    {% endblock %}
+ </div>
+
+{% endblock %}
+
+{% block title %} {{ flatpage.title }} {% endblock %}

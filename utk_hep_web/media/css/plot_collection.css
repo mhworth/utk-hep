@@ -1,0 +1,20 @@
+.plot {
+	width: 250px;
+	text-align: center;
+	padding: 7px;
+	float:left;
+}
+
+.plot_thumbnail {
+	width: 230px;
+	
+	background:black;
+	
+	padding-left: 10px;	
+	padding-right: 10px;
+}
+
+.plot_thumbnail_image {
+	width: 230px;
+	height: auto;	
+}

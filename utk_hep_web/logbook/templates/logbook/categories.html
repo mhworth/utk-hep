@@ -1,0 +1,26 @@
+{% extends "logbook/base.html" %}
+{% load logbook_extras %}
+
+{% block title %}
+ {{ title }}
+{% endblock %}
+
+
+{% block status %}
+{% if error %}
+<div class="error_message">{{ error_message }}</div>
+{% endif %}
+
+{% if status %}
+<div class="status_message">{{ status_message }}</div>
+{% endif %}
+{% endblock %}
+
+{% block display %}
+<ul id="listing">
+{% for node in nodes %}
+  <li class="{{ node|classname }}"><a href="{{ base }}{{ node.path }}">{{ node.name }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+

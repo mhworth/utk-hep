@@ -1,0 +1,55 @@
+{% extends "logbook/base.html" %}
+{% load logbook_extras %}
+
+{% block title %}
+ {{ title }}
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/logbook.css"/>
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/plot_collection.css"/>
+{% endblock %}
+
+
+{% block status %}
+{% if error %}
+<div class="error_message">{{ error_message }}</div>
+{% endif %}
+
+{% if status %}
+<div class="status_message">{{ status_message }}</div>
+{% endif %}
+{% endblock %}
+
+
+
+{% block display %}
+
+<h1>{{ plot_collection.name }}</h1>
+<h4>{{ plot_collection.category }}</h4>
+<div id="plots">
+
+
+{% for plot in plots %}
+<div class="plot">{{ plot.name }}
+<div class="plot_thumbnail"><a href="{{ plot.url }}"><img class="plot_thumbnail_image" src="{{ MEDIA_URL}}img/default_plot.gif"></img></a></div>
+<button class="edit_plot">Edit</button>
+<button class="add_version">Add Version</button>
+
+</div>
+{% endfor %}
+<div style="clear:both;"></div>
+
+</div>
+
+<div id="root_files">
+
+<h3>ROOT Files:</h3>
+{% for rpf in rpfs %}
+<div class="rootplotfile">{{ rpf.name }}</div>
+{% endfor %}
+<div style="clear:both;" ></div>
+
+</div>
+{% endblock %}
+

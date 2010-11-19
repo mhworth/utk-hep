@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+
+<title>{% block title %}{% endblock %}</title>
+<!-- Javascript -->
+
+{% block javascript %} {% endblock %}
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/base.css"/>
+{% block css %} {% endblock %}
+
+</head>
+
+<body>
+
+{% include "nav.html" %}
+
+	<div id="header_container">
+	<div id="header">
+	
+	<h1 id="name">Matt Hollingsworth</h1>
+		<div id="logos">
+			<img class="logo" style="width:100px; height:100px;float:left" src="{{ MEDIA_URL }}img/cmslogo.gif"/>
+			<img class="logo" style="width:150px; height:100px;float:center;" src="{{ MEDIA_URL }}img/utlogo.jpg"/>
+			<img class="logo" style="width:100px; height:100px; float:right;" src="{{ MEDIA_URL }}img/cernlogo.jpg"/>
+		</div>
+	</div> <!-- End Header -->
+	</div> <!-- End Header Container -->
+
+	<div id="content_container" >
+		<div id="content" >
+		{% block content %} Base Template {% endblock %}
+		</div>
+	</div>
+</body>
+
+<div id="footer">
+{% block footer %} Site design by <a href="mailto:mhollin3@utk.edu">Matt Hollingsworth</a>{% endblock %}
+</div>
+</html>
+
